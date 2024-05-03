@@ -7,23 +7,11 @@ import os
 import pytz
 import platform
 import messaging as mg
-# version = platform.python_version().split(".")[0]
-# if version == "3":
-#   import app_config.app_config as cfg
-# elif version == "2":
-#     import app_config as cfg
-# config = cfg.getconfig()
-config= config ={"api":{"meta":"https://data.exactspace.co/exactapi",
-"datapoints":"https://data.exactspace.co/api/v1/datapoints",
-"query":"https://data.exactspace.co/api/v1/datapoints/query",
-"model":"https://data.exactspace.co/model/",
-"prediction":"https://data.exactspace.co/prediction",
-"fcm_send":"https://fcm.googleapis.com/fcm/send",
-"efficiency":"https://data.exactspace.co/efficiency/",
-"service":"https://data.exactspace.co/service",
-"public_datacenter_url":"https://data.exactspace.co/",
-"batchefficiency":"https://data.exactspace.co/batchefficiency/"}
-}
+version = platform.python_version().split(".")[0]
+if version == "3":
+  import app_config.app_config as cfg
+elif version == "2":
+    import app_config as cfg
 
 body={
         "Silo 1": {
@@ -97,8 +85,8 @@ import pandas as pd
 import numpy as np 
 import requests , json,copy
 def getdata_api(dataTagId):
-        url='https://data.exactspace.co/exactdata/api/v1/datapoints/query'
-        #url=config["api"]["query"]
+        # url='https://data.exactspace.co/exactdata/api/v1/datapoints/query'
+        url=config["api"]["query"]
 #         print(url)
         body = {
             "metrics": [],
