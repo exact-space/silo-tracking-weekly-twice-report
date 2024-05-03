@@ -12,6 +12,7 @@ if version == "3":
   import app_config.app_config as cfg
 elif version == "2":
     import app_config as cfg
+config = cfg.getconfig()
 
 body={
         "Silo 1": {
