@@ -565,7 +565,7 @@ def update_consignment_feeding(consignment_data, feeding1_data):
                 feeding_updated.append((feeding_tuple[0],feeding_tuple[1],feeding_tuple[2],0.95,0))
             else:
                 feeding_updated.append((feeding_tuple[0],feeding_tuple[1],feeding_tuple[2],0,0))
-            print(f"Consignment not found for {feeding_tuple[1]}{feeding_tuple[2]}")
+            # print(f"Consignment not found for {feeding_tuple[1]}{feeding_tuple[2]}")
 
     consignment_data = [t for t in consignment_data if t[2] > 0]
 
@@ -790,7 +790,6 @@ formatted_date = timestamp_to_date(int(time.time()))
 report_file_generated = f"Daily_Silo_Tracking_Record_{formatted_date}.csv"
 new_df.to_csv(report_file_generated, index=False)
 
-###############
 uploadDataToAttachment(report_file_generated)
-# send_mail(report_file_generated)
+send_mail(report_file_generated)
 create_task(report_file_generated)
