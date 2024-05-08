@@ -446,7 +446,7 @@ def update_consignment_feeding2(consignment, silo):
             aggregated_data[date]['categories'][category] = {'total_value': 0, 'weight_sum': 0}
 
         aggregated_data[date]['categories'][category]['total_value'] += value
-        aggregated_data[date]['categories'][category]['weight_sum'] += weight
+        aggregated_data[date]['categories'][category]['weight_sum'] = weight
 
     Combined_feeding = [
         (
