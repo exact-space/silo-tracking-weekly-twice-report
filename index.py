@@ -178,7 +178,7 @@ def send_mail(report_file_generated):
     f1='/src/uploads/tasks/'+report_file_generated
     Report_name="Daily Silo Tracking Report"
 
-    emails=['anisha.jonnalagadda@adityabirla.com','dibyendu.g@adityabirla.com']
+    emails=['dibyendu.g@adityabirla.com']
 
     regards='ExactSpace Technologies</b></html>'
     body = {
@@ -239,8 +239,8 @@ def create_task(report_file_generated):
         '64a655f39465450006eebeec', #nikhil
         '61431baf1c46e3435ff50ac7', #sayan
         '5f491bb942ba5c3f7a474d15', #ashlin
-        '5c591d697dc9e324ee08a456', #arun
-        '6149b9acf1902b2b7aecf9b1' #anisha
+        '5c591d697dc9e324ee08a456' #arun
+        # '6149b9acf1902b2b7aecf9b1' #anisha
         ],
     "status": "inprogress",
     "content": [
@@ -261,7 +261,6 @@ def create_task(report_file_generated):
     "notifyEmailIds": [
         "nikhil.s@exactspace.co",
         'ashlin.f@exactspace.co',
-        'anisha.jonnalagadda@adityabirla.com',
         'sayan.dey@adityabirla.com',
         'dibyendu.g@adityabirla.com',
         'arun@exactspace.co'
