@@ -14,7 +14,12 @@ elif version == "2":
     import app_config as cfg
 config = cfg.getconfig()
 
-unitId = "60ae9143e284d016d3559dfb"
+unitId = os.environ.get("UNIT_ID")
+# unitId = 
+if unitId==None:
+    print( "no unit id passed")
+    exit()
+# unitId = "60ae9143e284d016d3559dfb"
 body={
         "Silo 1": {
             "Vendors": [
@@ -259,7 +264,7 @@ def create_task(report_file_generated):
     "incidentId": "",
     "category": "",
     "sourceURL": "",
-    "notifyEmailIds": ["rahul.k@exactspace.co",
+    "notifyEmailIds": ["rahul.k@exactspace.co"
         "nikhil.s@exactspace.co",
         'ashlin.f@exactspace.co',
         'sayan.dey@adityabirla.com',
